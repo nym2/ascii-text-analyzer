@@ -18,3 +18,8 @@ size_t count_letters(const char *text)
 
     return count;
 }
+
+size_t count_characters(const char *text)
+{
+    return strlen(text);
+}
