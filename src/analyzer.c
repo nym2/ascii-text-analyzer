@@ -137,3 +137,13 @@ void print_character_frequencies(const char *text)
         }
     }
 }
+
+void print_ascii_values(const char *text)
+{
+    for (size_t i = 0; text[i] != '\0'; i++)
+    {
+        unsigned char character = (unsigned char)text[i];
+
+        printf("%c = %u\n", character, character);
+    }
+}
