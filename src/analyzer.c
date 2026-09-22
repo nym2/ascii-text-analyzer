@@ -101,3 +101,39 @@ size_t count_special_characters(const char *text)
 
     return count;
 }
+
+void print_character_frequencies(const char *text)
+{
+    size_t frequency[256] = {0};
+
+    for (size_t i = 0; text[i] != '\0'; i++)
+    {
+        unsigned char character = (unsigned char)text[i];
+        frequency[character]++;
+    }
+
+    size_t max_frequency = 0;
+
+    for (size_t i = 0; i < 256; i++)
+    {
+        if (frequency[i] > max_frequency)
+        {
+            max_frequency = frequency[i];
+        }
+    }
+
+    if (max_frequency == 0)
+    {
+        printf("No characters found.\n");
+        return;
+    }
+
+    for (size_t i = 0; i < 256; i++)
+    {
+        if (frequency[i] == max_frequency)
+        {
+            printf("Most frequent character: '%c'\n", (char)i);
+            printf("Frequency: %zu\n", frequency[i]);
+        }
+    }
+}
