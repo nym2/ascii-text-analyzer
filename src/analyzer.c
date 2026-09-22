@@ -68,3 +68,17 @@ size_t count_uppercase(const char *text)
 
     return count;
 }
+
+size_t count_lowercase(const char *text)
+{
+    size_t count = 0;
+
+    for(size_t i = 0; text[i] != '\0'; i++)
+    {
+        if(islower((unsigned char)text[i]))
+        {
+            count++;
+        }
+    }
+    return count;
+}
