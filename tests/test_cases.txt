@@ -1,0 +1,43 @@
+TEST 1
+Input:
+Hello World
+
+Expected:
+Characters: 11
+Letters: 10
+Spaces: 1
+Digits: 0
+Special chars: 0
+Uppercase: 2
+Lowercase: 8
+
+
+TEST 2
+Input:
+Hello123
+
+Expected:
+Characters: 8
+Letters: 5
+Digits: 3
+
+
+TEST 3
+Input:
+ABCabc123!
+
+Expected:
+Characters: 10
+Letters: 6
+Digits: 3
+Special chars: 1
+Uppercase: 3
+Lowercase: 3
+
+
+TEST 4
+Input:
+!!!
+
+Expected:
+Special chars: 3
