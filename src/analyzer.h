@@ -14,4 +14,6 @@ size_t count_lowercase(const char *text);
 void print_character_frequencies(const char *text);
 void print_ascii_values(const char *text);
 
+char *read_input(void);
+
 #endif

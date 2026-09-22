@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 size_t count_letters(const char *text)
 {
@@ -147,3 +148,4 @@ void print_ascii_values(const char *text)
         printf("%c = %u\n", character, character);
     }
 }
+
