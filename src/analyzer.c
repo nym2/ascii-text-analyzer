@@ -149,3 +149,42 @@ void print_ascii_values(const char *text)
     }
 }
 
+char *read_input(void)
+{
+    size_t capacity = 128;
+    size_t length = 0;
+
+    char *text = malloc(capacity);
+
+    if (text == NULL)
+    {
+        return NULL;
+    }
+
+    int character;
+
+    while ((character = getchar()) != '\n' && character != EOF)
+    {
+        if (length + 1 >= capacity)
+        {
+            capacity *= 2;
+
+            char *temporary = realloc(text, capacity);
+
+            if (temporary == NULL)
+            {
+                free(text);
+                return NULL;
+            }
+
+            text = temporary;
+        }
+
+        text[length] = (char)character;
+        length++;
+    }
+
+    text[length] = '\0';
+
+    return text;
+}
